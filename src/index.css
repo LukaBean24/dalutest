@@ -133,3 +133,9 @@ body {
   background-color: rgb(129, 129, 129);
   opacity: 0.5;
 }
+
+@media (max-width: 800px) {
+  .login-container {
+    width: 90%;
+  }
+}
