@@ -138,4 +138,9 @@ body {
   .login-container {
     width: 100%;
   }
+
+  .header,
+  .inputs {
+    width: 90%;
+  }
 }
