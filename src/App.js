@@ -36,10 +36,10 @@ function App() {
     <>
       <Navbar />
       <div className='container'>
-        <img
+        {/* <img
           src='https://media.baamboozle.com/uploads/images/410104/1636047346_447449.jpeg'
           alt=''
-        />
+        /> */}
         <div className='login-container'>
           <div className='header'>
             <Typography
