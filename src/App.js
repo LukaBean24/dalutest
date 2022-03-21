@@ -97,7 +97,7 @@ function App() {
               placeholder='Enter Your Password Here'
               variant='outlined'
               color='primary'
-              margin='normal'
+              margin='dense'
               className='input'
               type='password'
               helperText={passwordInvalid ? 'Invalid Password' : ''}
