@@ -1,9 +1,9 @@
 import React from 'react'
-import logo from '../photos/logo.png'
 import Button from '@mui/material/Button'
 import { Typography } from '@mui/material'
+import { AiOutlineBell, AiOutlineUser, AiOutlineSearch } from 'react-icons/ai'
 
-const Navbar = () => {
+const Navbar = ({ logged }) => {
   return (
     <div className='navbar-container'>
       <div className='navbar'>
@@ -13,9 +13,21 @@ const Navbar = () => {
           </Typography>
         </div>
         <div className='register'>
-          <Button variant='outlined' color='primary' className='button'>
-            <Typography variant='button'>Register</Typography>
-          </Button>
+          {!logged && (
+            <Button variant='outlined' color='primary' className='button'>
+              <Typography variant='button'>Register</Typography>
+            </Button>
+          )}
+          {logged && (
+            <>
+              <div className='search-input'>
+                <AiOutlineSearch className='icon-search' />
+                <input type='text' placeholder='Search...' />
+              </div>
+              <AiOutlineBell className='icon' />
+              <AiOutlineUser className='icon' />
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -1,12 +1,5 @@
 import { createTheme } from '@mui/material'
-import {
-  green,
-  lightBlue,
-  orange,
-  purple,
-  red,
-  yellow,
-} from '@mui/material/colors'
+import { green, red } from '@mui/material/colors'
 
 const theme = createTheme({
   palette: {
