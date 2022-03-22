@@ -5,15 +5,15 @@ import { SiImdb } from 'react-icons/si'
 const Card = ({ data }) => {
   return (
     <div className='card'>
-      <div class='flip-card'>
-        <div class='flip-card-inner'>
-          <div class='flip-card-front'>
+      <div className='flip-card'>
+        <div className='flip-card-inner'>
+          <div className='flip-card-front'>
             <img
               src={`https://image.tmdb.org/t/p/original${data.poster_path}`}
               alt='Avatar'
             />
           </div>
-          <div class='flip-card-back'>
+          <div className='flip-card-back'>
             <Typography variant='h5' color='black'>
               {data.title}
             </Typography>
@@ -24,7 +24,7 @@ const Card = ({ data }) => {
         <div className='imdb'>
           <SiImdb style={{ margin: '0 1rem' }} />
           <Typography variant='body1' color='primary'>
-            {data.vote_average}
+            {data.vote_average.toFixed(1)}
           </Typography>
         </div>
         <div className='watchtime'>

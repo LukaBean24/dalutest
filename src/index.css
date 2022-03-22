@@ -278,6 +278,23 @@ body {
 }
 
 @media (max-width: 960px) {
+  .slider-gradient {
+    display: none;
+  }
+
+  .gradient {
+    display: none;
+  }
+
+  .slider-title {
+    white-space: nowrap;
+  }
+
+  .imdb,
+  .watchtime {
+    opacity: 0;
+  }
+
   .details {
     width: 80%;
     height: 100%;
@@ -299,6 +316,9 @@ body {
   }
 
   .slide::after {
+    display: none;
+  }
+  .search-input {
     display: none;
   }
 }
