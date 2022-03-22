@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material'
 import React from 'react'
-import { SiImdb } from 'react-icons/si'
+import { FaImdb } from 'react-icons/fa'
 
 const Card = ({ data }) => {
   return (
@@ -22,7 +22,7 @@ const Card = ({ data }) => {
       </div>
       <div className='card-info'>
         <div className='imdb'>
-          <SiImdb style={{ margin: '0 1rem' }} />
+          <FaImdb style={{ margin: '0 1rem' }} />
           <Typography variant='body1' color='primary'>
             {data.vote_average.toFixed(1)}
           </Typography>
