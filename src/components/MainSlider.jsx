@@ -1,37 +1,46 @@
 import React from 'react'
 import movies from '../movies'
 import Slider from 'react-slick'
+import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from 'react-icons/ai'
+import slider from 'react-slick/lib/slider'
 
 const data = movies.slice(0, 5)
 
 const MainSlider = () => {
+  const PrevArrow = (props) => {
+    const { onClick, className, style } = props
+    return (
+      <div className='arrow prev-arrow' onClick={onClick}>
+        <AiOutlineDoubleLeft className='icon' />
+      </div>
+    )
+  }
+  const NextArrow = (props) => {
+    const { onClick, className, style } = props
+    return (
+      <div className='arrow next-arrow' onClick={onClick}>
+        <AiOutlineDoubleRight className='icon' />
+      </div>
+    )
+  }
   const settings = {
-    dots: true,
-    arrows: false,
-    customPaging: (i) => {
-      return (
-        <div className='img-container'>
-          <img
-            className='dot'
-            src={`https://image.tmdb.org/t/p/original${data[i].backdrop_path}`}
-            alt=''
-          />
-          <div className='shadow'></div>
-        </div>
-        // <p className='dot'>{i}</p>
-      )
-    },
+    dots: false,
+    infinite: true,
+    arrows: true,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dotsClass: 'slick-dots slick-thumb',
-    speed: 500,
-    swipeToSlide: true,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
   }
   return (
     <>
-      <div className='details'></div>
+      {/* <div className='details'></div> */}
       <Slider {...settings}>
-        {data.map((movie) => {
+        {movies.map((movie) => {
           return (
             <div className='slide' key={movie.id}>
               <img

@@ -131,7 +131,7 @@ body {
 }
 
 .icon {
-  color: white;
+  color: #ffd369;
   font-size: 25px;
   cursor: pointer;
   margin-left: 2rem;
@@ -140,7 +140,7 @@ body {
 }
 
 .icon:hover {
-  color: #ffd369;
+  color: white;
 }
 
 .search-input {
@@ -157,7 +157,7 @@ body {
 .search-input input {
   height: 30px;
   border-radius: 20px;
-  border: 2px solid white;
+  border: 2px solid #ffd369;
   background-color: transparent;
   outline: none;
   transition: 0.2s ease;
@@ -166,14 +166,14 @@ body {
 }
 
 .search-input input:focus {
-  border: 2px solid #ffd369;
+  border: 2px solid white;
 }
 
 .icon-search {
   position: absolute;
   right: 10px;
   font-size: 20px;
-  color: white;
+  color: #ffd369;
   transition: 0.2s ease;
 }
 
@@ -200,28 +200,28 @@ body {
   object-position: center;
 }
 
-.slick-dots {
+/* .slick-dots {
   width: 185px;
   height: 100%;
-  box-shadow: inset 0 0 200px black;
+  box-shadow: inset 0 0 100px #ffd26936;
   display: grid !important;
   grid-template-rows: repeat(5, 1fr);
   position: absolute;
   top: 0;
   right: 0;
-}
+} */
 
-.slick-dots li {
+/* .slick-dots li {
   width: 97%;
   height: 100%;
   position: relative;
-}
+} */
 
-.slick-active .shadow {
+/* .slick-active .shadow {
   box-shadow: inset 0 0 100px #ffd26936;
-}
+} */
 
-.shadow {
+/* .shadow {
   width: 100%;
   height: 92%;
   position: absolute;
@@ -234,13 +234,35 @@ body {
 .slick-dots li img {
   width: 100%;
   height: 100%;
-}
+} */
 
-.details {
+/* .details {
   width: 100%;
   height: 550px;
   box-shadow: inset 0 0 200px black, inset 0 0 200px black,
     inset 0 0 200px black, inset 0 0 200px black;
   z-index: 22;
   position: absolute;
+} */
+
+.arrow {
+  width: 100px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(133, 133, 133, 0.274);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.arrow:hover {
+  background-color: black;
+}
+
+.next-arrow {
+  right: 0;
 }

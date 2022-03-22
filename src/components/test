@@ -1,0 +1,13 @@
+    // customPaging: (i) => {
+    //   return (
+    //     <div className='img-container'>
+    //       <img
+    //         className='dot'
+    //         src={`https://image.tmdb.org/t/p/original${data[i].backdrop_path}`}
+    //         alt=''
+    //       />
+    //       <div className='shadow'></div>
+    //     </div>
+    //     // <p className='dot'>{i}</p>
+    //   )
+    // },
