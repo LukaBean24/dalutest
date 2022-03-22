@@ -62,6 +62,7 @@ const MovieSlider = ({ title }) => {
   }
   return (
     <div
+      className='movie-slider-container'
       style={{
         padding: '2rem 0',
         position: 'relative',
@@ -79,16 +80,7 @@ const MovieSlider = ({ title }) => {
         </div>
         <div className='arr'></div>
       </div>
-      <Slider
-        {...settings}
-        style={{
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '0 4rem',
-          margin: '2rem 0',
-        }}
-      >
+      <Slider {...settings} className='movie-slider'>
         {movies.map((movie) => {
           return <Card data={movie} key={movie.id} />
         })}
