@@ -1,40 +1,39 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { Typography } from '@mui/material'
 import React from 'react'
+import { SiImdb } from 'react-icons/si'
 
 const Card = ({ data }) => {
-  const variants = {
-    hidden: {
-      scale: 0,
-      opacity: 0,
-    },
-    visible: {
-      scale: 1,
-      opacity: 1,
-    },
-    exit: {
-      scale: 0,
-      opacity: 0,
-      transition: { ease: 'easeInOut' },
-    },
-  }
   return (
-    <>
+    <div className='card'>
       <div class='flip-card'>
         <div class='flip-card-inner'>
           <div class='flip-card-front'>
             <img
-              src={`https://image.tmdb.org/t/p/original${data.backdrop_path}`}
+              src={`https://image.tmdb.org/t/p/original${data.poster_path}`}
               alt='Avatar'
             />
           </div>
           <div class='flip-card-back'>
-            <h1>{data.title}</h1>
-            <p>{data.overview}</p>
-            <p>{data.rating}</p>
+            <Typography variant='h5' color='black'>
+              {data.title}
+            </Typography>
           </div>
         </div>
       </div>
-    </>
+      <div className='card-info'>
+        <div className='imdb'>
+          <SiImdb style={{ margin: '0 1rem' }} />
+          <Typography variant='body1' color='primary'>
+            {data.vote_average}
+          </Typography>
+        </div>
+        <div className='watchtime'>
+          <Typography variant='body1' color='primary'>
+            2h 36m
+          </Typography>
+        </div>
+      </div>
+    </div>
   )
 }
 
